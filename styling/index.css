@@ -1,0 +1,317 @@
+*{
+    text-decoration: none;
+    margin: 0px;
+    padding: 0px;
+    color: var(--text-color1);
+    font-family: var(--font-family);
+}
+
+:root{
+    --font-family: monospace,'Courier New', Courier;
+    --text-color1: #10184a;
+    --text-color2: #9da2c7;
+    --primary1: #667BC6;
+    --primary2: #FDFFD2;
+    --secondary1: #FFB4C2;
+    --secondary2: #DA7297;
+}
+
+header{
+    position: relative;
+    text-align: center;
+    width: 100%;
+    height: 85vh;
+    background-color: var(--primary1);
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.description-container{
+    position: relative;
+    height: 75vh;
+    width: 90vw;
+/* URL: https://www.cidrap.umn.edu/mpox/mpox-1-year-30000-us-cases-and-1-million-vaccine-doses*/
+/* DETAIL: https://www.cidrap.umn.edu/sites/default/files/styles/article_detail/public/article/Mpox%20on%20palms%20of%20hands.jpg?itok=ZGDwLrrl*/
+    background-image: url('../images/Mpox on palms of hands.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 10px;
+    box-shadow: 0px 0px 20px 4px black inset;
+
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: space-evenly;
+}
+.description-container > h1,
+.description-container > p{
+    position: relative;
+    background-color: var(--primary2);
+    border-radius: 5px;
+    z-index: 2;
+    margin: 0px 4em;
+    padding: 1em;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    transition: all 0.2s;
+
+}
+.description-container > h1:hover,
+.description-container > p:hover{
+    box-shadow: 5px 5px 0px 0px var(--primary1);
+    transition: all 0.2s;
+}
+
+.circle{
+    position: absolute;
+    background-color: var(--primary2);
+    border-radius: 50%;
+    filter: blur(35px);
+    opacity: 0.4;
+    
+    animation: move-circle ease-in-out infinite;
+}
+#c1{
+    width: 200px;
+    height: 200px;
+    top: 6vh;
+    left: 6vw;
+
+    animation-duration: 1s;
+}
+#c2{
+    width: 150px;
+    height: 150px;
+    bottom: 13vh;
+    right: 8vw;
+
+    animation-duration: 1.2s;
+}
+#c3{
+    width: 200px;
+    height: 200px;
+    top: 12vh;
+    right: 16vw;
+
+    animation-duration: 2s;
+}
+#c4{
+    width: 170px;
+    height: 170px;
+    bottom: 6vh;
+    left: 10vw;
+
+    animation-duration: 0.7s;
+}
+#c5{
+    width: 250px;
+    height: 250px;
+    bottom: 45%;
+    left: 50%;
+    translate: -50% 50%;
+
+    animation-duration: 2.1s;
+}
+#c6{
+    width: 200px;
+    height: 200px;
+    bottom: 50%;
+    left: 25%;
+
+    animation-duration: 1.2s;
+}
+@keyframes move-circle{
+    50%{
+        opacity: 0;
+    }
+}
+
+nav{
+    position: sticky;
+    top: 0px;
+    z-index: 10;
+    width: 100%;
+    height: 8vh;
+    background-color: var(--secondary1);
+    box-shadow: 0px 5px 20px var(--text-color1);
+
+    display: flex;
+    justify-content: center;
+}
+
+nav td{
+    height: 8.1vh;
+    width: 14vw;
+    text-decoration: none;
+    text-align: center;
+    translate: 0px -2px;
+
+    transition: all 0.3s;
+}
+nav td:hover{
+    background-color: #ff95ba;
+    text-decoration: underline;
+
+    transition: all 0.25s;
+}
+
+.after-nav{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 7vh;
+    padding: auto;
+}
+.after-nav::after{
+    content: '';
+    position: absolute;
+    z-index: 2;
+    top: 100vh;
+    width: 100%;
+    height: 120px;
+    background-color: white;
+    rotate: 180deg;
+    clip-path: polygon(0 100%, 3% 50%, 7% 99%, 10% 50%, 14% 100%, 17% 51%, 21% 100%, 24% 50%, 28% 100%, 30% 50%, 34% 99%, 37% 50%, 41% 100%, 43% 50%, 47% 100%, 49% 50%, 52% 100%, 55% 50%, 58% 100%, 62% 50%, 66% 100%, 69% 50%, 73% 100%, 77% 50%, 81% 100%, 84% 50%, 88% 100%, 91% 50%, 94% 100%, 97% 50%, 100% 100%);
+}
+.next-arrow{
+    font-size: xx-large;
+    rotate: 180deg;
+    animation: spinX 0.6s ease-in-out infinite;
+}
+@keyframes spinX{
+    from{
+        transform: rotateY(0deg);
+    }
+    to{
+        transform: rotateY(180deg);
+    }
+}
+
+
+
+article{
+    position: relative;
+    margin: 0px 10px;
+    padding-bottom: 40vh;
+    background-color: var(--primary1);
+}
+.article-container{
+    position: relative;
+    top: 15vh;
+    padding: 2em;
+    display: flex;
+    flex-flow: column;
+    gap: 5vh;
+}
+.para-container{
+    background-color: var(--primary1);
+    padding: 3em;
+    border-radius: 10px;
+    box-shadow: 5px 5px 30px black
+}
+.para-container h1,
+.para-container p{
+    background-color: var(--primary2);
+    text-align: center;
+    padding: 1em;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px black;
+}
+
+#definisi-container{
+/* URL: https://www.aol.com/lifestyle/mpox-everything-know-virus-behind-140557540.html?soc_src=social-sh&soc_trk=pin*/
+/* DETAIL: https://s.yimg.com/ny/api/res/1.2/1oPL3fm1gX49Lw8YpEF0KQ--/YXBwaWQ9aGlnaGxhbmRlcjt3PTEyNDI7aD03Nzc-/https://media.zenfs.com/en/aol_the_telegraph_333/39b69b0524869ad45e0dbbf3f2c3d488*/
+    background-image: url('../images/39b69b0524869ad45e0dbbf3f2c3d488.jpeg');
+    background-position: center;
+    background-repeat: no-repeat;
+}
+#gejala-container{
+/* URL: https://www.diariopotiguar.com.br/2024/08/o-que-e-mpox-que-fez-ministerio-da.html*/
+/* DETAIL: https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjvvUQvgL4Q_YxbAsdPM05C86PioVpPufxV39lu5N8H76Le6qLqR4TJVrAHSK6_o1Ow3-GqHmUSmrCLe65RJdbmdsYe9nq-NhDEkWH56cJVjIUNz_PidWv2KOnDeo64-wIJy68c3lMVWcrclIKvr6CsrYBVuYti5kRtBEjExpl7LUYqOTCzqcEA5Sfx4xI/w640-h640/variola%20dos%20macacos%20mpox%20monkeypox.png*/
+        background-image: url('../images/variola dos macacos mpox monkeypox.png');
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+#tahapan-container{
+/* URL: https://www.nationalgeographic.com.es/ciencia/brote-mpox-podria-convertirse-proxima-pandemia-mundial_23069?utm_source=pinterest&utm_medium=social&utm_campaign=trafico*/
+/* DETAIL: https://i.pinimg.com/736x/26/18/6e/26186ee05ceac7764f6c63b3c08a31f8.jpg*/
+    background-image: url('../images/mpox-foto-virus_00000000_240822102156_960x546.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+#penyebab-container{
+/* URL: https://www.huffpost.com/entry/depression-rates-rose-18-percent-in-the-last-decade_n_58af15aee4b0780bac272606?ncid=engmodushpmg00000005*/
+/* DETAIL: https://img.huffingtonpost.com/asset/58af1bc52900002200bea7b0.jpeg?ops=scalefit_720_noupscale&format=webp*/
+    background-image: url('../images/58af1bc52900002200bea7b0.webp');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+#pencegahan-container{
+/* URL: https://www.queerty.com/california-issues-mpox-warning-as-new-research-points-to-how-the-virus-is-evolving-20231103*/
+/* DETAIL: https://adabgmwwup.cloudimg.io/v7/_queerty-prodweb_/2023/05/man-vaccine-mpox-shutterstock.jpg?auto=format&auto=compress&fit=crop&w=670*/
+    background-image: url('../images/man-vaccine-mpox-shutterstock.webp');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.paragraphs{
+    background-color: var(--secondary1);
+    padding: 1em;
+    border-radius: 10px;
+
+    display: flex;
+    flex-flow: column;
+    gap: 0.5em;
+}
+
+
+
+footer{
+    position: relative;
+    width: 100%;
+    height: 35vh;
+    background-color: #10184a;
+}
+footer > h1,
+footer h3,
+footer p,
+footer a{
+    color:#9da2c7;
+    text-align: center;
+    padding: 1em;
+    font-size: 0.8em;
+}
+.profile{
+    display: flex;
+    justify-content: space-evenly;
+    gap: 10px;
+}
+.sections{
+    flex-grow: 1;
+    text-align: center;
+    border-left: black 5px dashed;
+    border-right: black 5px dashed;
+}
+.sections a{
+    font-size: 1.6em;
+}
+
+@media (max-width: 600px){
+    * {
+        font-size: 0.95em;
+    }
+    .description-container h1{
+        margin-left: 100px;
+        margin-right: 100px;
+    }
+    .sections{
+        font-size: 0.5em;
+    }
+}
